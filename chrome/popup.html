@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        :root { --bg:#2b2b2b; --fg:#eee; --card:#383838; --muted:#aaa; --accent:#4CAF50; --shadow:rgba(0,0,0,.3) }
+        @media(prefers-color-scheme:light) { :root { --bg:#f9f9f9; --fg:#333; --card:white; --muted:#666; --shadow:rgba(0,0,0,.1) } }
+
+        body { width:220px; padding:15px; font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif; text-align:center; background:var(--bg); color:var(--fg) }
+        h2 { font-size:16px; margin:0 0 15px }
+        .card { background:var(--card); padding:15px; border-radius:8px; box-shadow:0 2px 5px var(--shadow); margin-bottom:8px }
+        .count { font-size:28px; font-weight:bold; color:var(--accent); margin-bottom:5px }
+        .label { font-size:12px; color:var(--muted); text-transform:uppercase; letter-spacing:.5px }
+
+        .toggle-row { display:flex; justify-content:space-between; align-items:center; padding:10px 15px }
+        .switch { position:relative; width:36px; height:20px }
+        .switch input { opacity:0; width:0; height:0 }
+        .slider { position:absolute; inset:0; background:#555; border-radius:20px; cursor:pointer; transition:background-color .3s }
+        .slider::before { content:''; position:absolute; width:14px; height:14px; left:3px; bottom:3px; background:white; border-radius:50%; transition:transform .3s }
+        .switch input:checked+.slider { background:var(--accent) }
+        .switch input:checked+.slider::before { transform:translateX(16px) }
+
+        .reset-btn { width:100%; padding:8px; border:none; border-radius:6px; background:#e53935; color:white; font-size:12px; font-weight:600; cursor:pointer; text-transform:uppercase; letter-spacing:.5px; transition:opacity .2s }
+        .reset-btn:hover { opacity:.85 }
+
+        .separator { margin-top:10px; padding-top:10px; border-top:1px solid var(--shadow) }
+        .separator a { color:var(--muted); font-size:11px; text-decoration:none; letter-spacing:.3px }
+        .separator a:hover { color:var(--accent) }
+    </style>
+</head>
+<body>
+    <h2>Imgur Fix</h2>
+
+    <div class="card">
+        <div class="count" id="currentCount">0</div>
+        <div class="label">Current Page</div>
+    </div>
+
+    <div class="card">
+        <div class="count" id="totalCount">0</div>
+        <div class="label">Total Files Proxied</div>
+    </div>
+
+    <div class="separator">
+        <button class="reset-btn" id="resetStats">Reset Stats</button>
+    </div>
+
+    <div class="card toggle-row" style="margin-top:10px">
+        <span class="label">Badge Counter</span>
+        <label class="switch">
+            <input type="checkbox" id="badgeToggle" checked>
+            <span class="slider"></span>
+        </label>
+    </div>
+
+    <div class="separator">
+        <a href="https://github.com/MrBMT/ImgurFix" target="_blank">View on GitHub</a>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

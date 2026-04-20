@@ -1,0 +1,49 @@
+[
+  {
+    "id": 1,
+    "priority": 2,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "regexFilter": "^https?://(www\\.)?imgur\\.com/?$",
+      "resourceTypes": ["main_frame", "sub_frame"]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 2,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "regexFilter": "^https?://(www\\.)?imgur\\.com/(a|gallery)/",
+      "resourceTypes": ["main_frame", "sub_frame", "image", "xmlhttprequest"]
+    }
+  },
+  {
+    "id": 4,
+    "priority": 2,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "regexFilter": "^https?://(\\w+\\.)?imgur\\.com/.*\\.mp4(\\?.*)?$",
+      "resourceTypes": ["main_frame", "sub_frame", "image", "xmlhttprequest", "media"]
+    }
+  },
+  {
+    "id": 3,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "regexSubstitution": "https://external-content.duckduckgo.com/iu/?u=\\0"
+      }
+    },
+    "condition": {
+      "regexFilter": "^https?://(\\w+\\.)?imgur\\.com/.*",
+      "resourceTypes": ["image", "xmlhttprequest", "main_frame", "sub_frame"]
+    }
+  }
+]
