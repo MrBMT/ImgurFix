@@ -1,6 +1,6 @@
 # Imgur Fix
 
-This extension reroutes Imgur media via the DuckDuckGo Proxy.
+This extension reroutes Imgur images via the DuckDuckGo Proxy.
 
 ## Chrome Installation
 
