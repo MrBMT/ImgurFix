@@ -24,4 +24,6 @@ For Firefox, the extension is officially signed by Mozilla, so simply:
 1. Go to https://addons.mydevserver.uk/imgur-fix-latest.xpi
 2. Click Add
 
+Note: The same file is included in the [latest release on Github](https://github.com/MrBMT/ImgurFix/releases/latest), so you can download there too if you prefer.
+
 *Credits:* Icon provided by https://www.flaticon.com
