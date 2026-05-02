@@ -15,8 +15,6 @@ Works for direct imgur links to JPG, WEBP, PNG and GIF files (both with and with
 5. Browse to and select the unzipped folder
 6. The extension should now be enabled
 
-> To update after making changes, go back to `chrome://extensions` and click the refresh icon on the extension card.
-
 ## Firefox Installation
 
 For Firefox, the extension is officially signed by Mozilla, so simply:
